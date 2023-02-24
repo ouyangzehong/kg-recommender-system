@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Fragmentuse.ThirdFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp">
+            <Service.EChartView
+                android:id="@+id/lineChart"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="12dp"
+                android:background="#00FFFFFF" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_third"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ddb66c"
+                app:tabIndicatorHeight="4dp"
+                app:tabIndicatorColor="#2d356d"
+                app:tabSelectedTextColor="#2d356d"
+                app:tabTextColor="#ffffff"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:background="@color/yellow_0"
+            android:id="@+id/vp_third"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Activity.LoginActivity">
+
+    <!--背景图片-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        />
+
+    <!--背景blur遮罩-->
+
+    <io.alterac.blurkit.BlurLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:blk_fps="60"
+        android:alpha="0.8"
+        app:blk_blurRadius="15"
+        app:blk_cornerRadius="2dp"
+        app:blk_downscaleFactor="0.12"
+        android:id="@+id/blurLayout"
+        />
+
+    <!--猫头鹰-->
+    <RelativeLayout
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/input_blur"
+        android:layout_marginTop="-100dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <!--头-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/owl_head"
+            android:id="@+id/owl_head"
+            />
+
+        <!--左拳-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/owl_head"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icon_hand"
+            android:id="@+id/owl_left_hand"
+            />
+
+        <!--右拳-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/owl_head"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/icon_hand"
+            android:id="@+id/owl_right_hand"
+            />
+
+        <!--左翅膀-->
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/owl_head"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/arm_left"
+            android:id="@+id/owl_left_arm"
+            />
+
+        <!--右翅膀-->
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/owl_head"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="45dp"
+            android:src="@drawable/arm_right"
+            android:id="@+id/owl_right_arm"
+            />
+
+
+
+    </RelativeLayout>
+
+    <!--输入部分背景blur遮罩-->
+    <io.alterac.blurkit.BlurLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true"
+        app:blk_fps="0"
+        android:alpha="1"
+        android:background="@drawable/input_blur"
+        app:blk_cornerRadius="15dp"
+        app:blk_downscaleFactor="0.12"
+        android:id="@+id/input_blur"
+        />
+
+    <!--输入部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+
+        <!--账号输入框-->
+        <EditText
+            android:id="@+id/operation_edittext_user"
+            style="@style/EditTextStyle"
+            android:drawableLeft="@drawable/user"
+            android:hint="账号"
+            android:inputType="text" />
+
+        <!--密码输入框-->
+        <EditText
+            android:id="@+id/operation_edittext_password"
+            style="@style/EditTextStyle"
+            android:drawableLeft="@drawable/password"
+            android:hint="密码"
+            android:inputType="textPassword" />
+
+        <!--登录按钮-->
+        <Button
+            android:id="@+id/operation_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_shape"
+            android:enabled="false"
+            android:text="登录"
+            android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/operation_btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_shape"
+            android:enabled="true"
+            android:text="注册"
+            android:textColor="#ffffff" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

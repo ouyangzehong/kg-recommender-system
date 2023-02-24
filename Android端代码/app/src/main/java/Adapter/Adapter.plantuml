@@ -1,0 +1,181 @@
+@startuml
+
+title __ADAPTER's Class Diagram__\n
+
+  namespace Adapter {
+    class Adapter.DMFruitRVAdapter {
+        ~ list : List<DMFoodBeaan>
+        {static} - TAG : String
+        - context : Context
+        + DMFruitRVAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+        + updata()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.DMFruitRVAdapter.recommendholder {
+        ~ heat : TextView
+        ~ image : ImageView
+        ~ title : TextView
+        ~ tv_effect : TextView
+        + recommendholder()
+        + setdata()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.DaGeWeekNotesRVAdapter {
+        ~ list : List<WeekNotesBean>
+        {static} - TAG : String
+        - context : Context
+        + DaGeWeekNotesRVAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+        + updata()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.DaGeWeekNotesRVAdapter.recommendholder {
+        ~ day_of_week : TextView
+        ~ daynotesBeanList : List<DaynotesBean>
+        ~ et_content_monday : EditText
+        ~ et_name_monday : EditText
+        ~ iv_add_monday_note : ImageView
+        ~ iv_arrowright_monday : ImageView
+        ~ ll_addnote_moday : LinearLayout
+        ~ rv_monday : RecyclerView
+        ~ tv_tianjiashuju_monday_note : TextView
+        - flag : int
+        - flag_add : int
+        + addonclick()
+        + llonclick()
+        + recommendholder()
+        + setdata()
+        - initRV()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.MyFragmentPagerAdapter {
+        - mTitles : String[]
+        + MyFragmentPagerAdapter()
+        + getCount()
+        + getItem()
+        + getPageTitle()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.RecommendRVAdapter {
+        ~ list : List<FoodBean>
+        - context : Context
+        + RecommendRVAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+        + updata()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.RecommendRVAdapter.recommendholder {
+        ~ e460 : TextView
+        ~ fat : TextView
+        ~ heat : TextView
+        ~ image : ImageView
+        ~ pro : TextView
+        ~ title : TextView
+        ~ tv_cho : TextView
+        + recommendholder()
+        + setdata()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.SecondFragmentPagerAdapter {
+        - mTitles : String[]
+        - mfragments : List<Fragment>
+        + SecondFragmentPagerAdapter()
+        + getCount()
+        + getItem()
+        + getPageTitle()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.ViewPagerAdapter {
+        - mList : List<Fragment>
+        - mTitles : String[]
+        + ViewPagerAdapter()
+        + getCount()
+        + getItem()
+        + getPageTitle()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.WeekNotesRVAdapter {
+        ~ list : List<DaynotesBean>
+        {static} - TAG : String
+        - context : Context
+        + WeekNotesRVAdapter()
+        + addOneNote()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+        + updata()
+    }
+  }
+  
+
+  namespace Adapter {
+    class Adapter.WeekNotesRVAdapter.recommendholder {
+        ~ content : TextView
+        ~ jianhao : ImageView
+        ~ name : TextView
+        + recommendholder()
+        + setdata()
+    }
+  }
+  
+
+  Adapter.DMFruitRVAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  Adapter.DMFruitRVAdapter +-down- Adapter.DMFruitRVAdapter.recommendholder
+  Adapter.DMFruitRVAdapter.recommendholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  Adapter.DaGeWeekNotesRVAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  Adapter.DaGeWeekNotesRVAdapter +-down- Adapter.DaGeWeekNotesRVAdapter.recommendholder
+  Adapter.DaGeWeekNotesRVAdapter.recommendholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  Adapter.DaGeWeekNotesRVAdapter.recommendholder o-- Adapter.WeekNotesRVAdapter : weekNotesRVAdapter
+  Adapter.MyFragmentPagerAdapter -up-|> androidx.fragment.app.FragmentPagerAdapter
+  Adapter.RecommendRVAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  Adapter.RecommendRVAdapter +-down- Adapter.RecommendRVAdapter.recommendholder
+  Adapter.RecommendRVAdapter.recommendholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  Adapter.SecondFragmentPagerAdapter -up-|> androidx.fragment.app.FragmentPagerAdapter
+  Adapter.ViewPagerAdapter -up-|> androidx.fragment.app.FragmentStatePagerAdapter
+  Adapter.WeekNotesRVAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  Adapter.WeekNotesRVAdapter +-down- Adapter.WeekNotesRVAdapter.recommendholder
+  Adapter.WeekNotesRVAdapter.recommendholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

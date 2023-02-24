@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    欢迎来到对抗路 现在是{{ var }}<br/>
+    今天值班的是：<br/>
+     {% for data in list %}
+        <li>{{ data }}</li>
+     {% endfor %}
+
+     任务：
+        <table>
+                {% for key,value in task.items() %}
+                     <tr>
+                     <td>{{ key }}</td>
+                     <td>{{ value }}</td>
+                    </tr>
+                {% endfor %}
+        </table>
+</body>
+</html>

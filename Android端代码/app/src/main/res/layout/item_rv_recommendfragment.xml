@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="#00FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#ddb66c"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:id="@+id/iv_cd"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/shuizhuyu"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/cv_recommend"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="11"
+            android:text="水煮鱼"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_heat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/cv_recommend"
+            android:text="116"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/tv_heat"
+            android:text="千卡/100克"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:divider="@drawable/line_h"
+        android:orientation="vertical"
+        android:showDividers="beginning|middle|end">
+
+        <TableRow
+            android:divider="@drawable/line_h"
+            android:orientation="horizontal"
+            android:showDividers="beginning|middle|end">
+
+            <TextView
+
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="碳水化合物" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="脂肪" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="纤维素" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="蛋白质" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:divider="@drawable/line_h"
+            android:showDividers="beginning|middle|end">
+
+            <TextView
+                android:id="@+id/tv_cho"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="内容" />
+
+            <TextView
+                android:id="@+id/tv_fat"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="内容" />
+
+            <TextView
+                android:id="@+id/tv_e"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="内容" />
+
+            <TextView
+                android:id="@+id/tv_pro"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="内容" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:id="@+id/star_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            app:srb_drawBorderEnabled="false"
+            app:srb_fillColor="#EAAB3C"
+            app:srb_numberOfStars="5"
+            app:srb_starBackgroundColor="#E6FFFFFF"
+            app:srb_starSize="25dp"
+            app:srb_stepSize="1" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/dotted_line"
+        android:layerType="software" />
+
+</LinearLayout>

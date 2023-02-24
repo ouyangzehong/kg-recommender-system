@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="#00FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_monday_note"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/day_of_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="周一"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/iv_arrowright_monday"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow_right" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rv_monday"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_addnote_moday"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/tv_tianjiashuju_monday_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="添加食物"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/et_name_monday"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="输入食物名称"/>
+            <EditText
+                android:id="@+id/et_content_monday"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请输入含量"
+                android:layout_toLeftOf="@+id/iv_add_monday_note"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"/>
+
+
+            <ImageView
+                android:id="@+id/iv_add_monday_note"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/jiahao" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/dotted_line_dark" />
+
+</LinearLayout>

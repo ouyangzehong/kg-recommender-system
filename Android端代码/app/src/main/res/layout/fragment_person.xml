@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow_0">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl1_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="22dp"
+                    android:background="@drawable/shape_radius21">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="60dp"
+                        android:includeFontPadding="true"
+                        android:text="秋名山骑手"
+                        android:textStyle="bold"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="58dp"
+                        android:layout_toRightOf="@+id/user_name"
+                        android:src="@mipmap/vip" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_jianjie_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/user_name"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape_radius10"
+                            android:includeFontPadding="true"
+                            android:padding="5dp"
+                            android:text="北京 房山" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/shape_radius10"
+                            android:includeFontPadding="true"
+                            android:padding="5dp"
+                            android:text="血糖偏高" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/ll_jianjie_person"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/lable_jianjie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="true"
+                            android:text="个人简介:"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="15dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="true"
+                            android:text="丢掉幻想，勇敢斗争"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="15dp"
+                            />
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#ddb66c"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="50dp">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/touxiang"/>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rl2_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl1_person"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="22dp"
+                    android:background="@drawable/shape_radius20"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="30dp">
+
+                    <TextView
+                        android:id="@+id/lable_jibenxinxi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:text="基本信息"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lable_jibenxinxi"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="性别："
+                                android:textColor="#80515151"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="男"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="年龄："
+                                android:textColor="#80515151"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="35"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="血糖："
+                                android:textColor="#80515151"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="空腹血糖4.5-7.6mmol/L"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="血压："
+                                android:textColor="#80515151"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="收缩压90-140mmHg\n舒张压60-90mmHg"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="血脂："
+                                android:textColor="#80515151"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="总胆固醇5.20mmol/L\n甘油三酯1.7mmol/L"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl3_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl2_person"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="22dp"
+                    android:background="@drawable/shape_radius20"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="30dp">
+
+                    <TextView
+                        android:id="@+id/lable_饮食口味"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:text="饮食口味"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lable_饮食口味"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/shape_radius10"
+                            android:includeFontPadding="true"
+                            android:padding="5dp"
+                            android:text="含糖低的蔬菜"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/shape_radius10"
+                            android:includeFontPadding="true"
+                            android:padding="5dp"
+                            android:text="含维生素B"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/shape_radius10"
+                            android:includeFontPadding="true"
+                            android:padding="5dp"
+                            android:text="喜欢甜品"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

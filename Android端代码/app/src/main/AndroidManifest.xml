@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.hellofood"> <!-- 忽略第三方的最小兼容版本问题 -->
+    <uses-sdk tools:overrideLibrary="com.bryant.editlibrary" />
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 使网络支持 http协议 android api30以后仅仅支持https -->
+    <uses-feature
+        android:name="org.apache.http.legacy"
+        android:required="false" />
+
+    <application
+        android:name="Service.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HelloFood"
+        tools:targetApi="n">
+        <activity
+            android:name="Activity.LoginActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="Activity.DMSuitableFoodActivity"
+            android:exported="false" />
+        <activity
+            android:name="Activity.SplashActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="Activity.MainActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+    </application>
+
+</manifest>

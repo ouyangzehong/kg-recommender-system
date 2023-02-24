@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--为什么需要样式：app中的标题-字体，字号，颜色 。。。
+        共同的部分，抽取出来-->
+    <style name="EditTextStyle">
+        <item name="android:layout_width">
+            match_parent
+        </item>
+
+        <item name="android:layout_height">
+            50dp
+        </item>
+
+        <item name="android:layout_marginTop">
+            20dp
+        </item>
+
+        <item name="android:background">
+            @drawable/edittext_shape
+        </item>
+
+        <item name="android:paddingLeft">
+            7dp
+        </item>
+
+        <item name="android:drawablePadding">
+            7dp
+        </item>
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:maxLines">
+            1
+        </item>
+
+        <item name="android:textCursorDrawable">
+            @drawable/edittext_cursor
+        </item>
+    </style>
+
+</resources>

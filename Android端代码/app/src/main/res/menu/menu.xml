@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firstFragment"
+        android:icon="@mipmap/xin"
+        android:title="推荐"
+        />
+    <item
+        android:id="@+id/secondFragment"
+        android:icon="@mipmap/tansuo"
+        android:title="探索" />
+    <item
+        android:id="@+id/thirdFragment"
+        android:icon="@mipmap/mine"
+        android:title="我的" />
+</menu>

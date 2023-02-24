@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="#00FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#ddb66c"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:id="@+id/iv_cd"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/shuizhuyu"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/cv_recommend"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="11"
+            android:text="水煮鱼"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_heat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/cv_recommend"
+            android:text="116"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/tv_heat"
+            android:text="千卡/100克"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="功效"
+        android:textSize="20sp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/dotted_line"
+        android:layerType="software" />
+
+</LinearLayout>

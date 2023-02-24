@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddb66c">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_tips_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="了解营养素，食用更放心"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="200dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:id="@+id/search_et_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="22dp"
+                    android:background="@drawable/search_edittext_shape"
+                    android:drawableLeft="@mipmap/serch"
+                    android:drawablePadding="5dp"
+                    android:hint="请输入查询的食物"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp" />
+                <RelativeLayout
+                    android:visibility="invisible"
+                    android:id="@+id/rv_find"
+                    android:layout_below="@+id/search_et_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_find"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#ddb66c"
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="20dp">
+                        <ImageView
+                            android:id="@+id/iv_find"
+                            android:src="@mipmap/shuizhuyu"
+                            android:scaleType="centerCrop"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+                        </ImageView>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tv_title_find"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/cv_find"
+                        android:text="水煮鱼"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_heat_find"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_toRightOf="@+id/cv_find"
+                        android:text="116"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="千卡/100克"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_toRightOf="@+id/tv_heat_find"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="50dp"/>
+
+                </RelativeLayout>
+
+                <Service.EChartView
+                    android:id="@+id/barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/rv_find"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:background="#00FFFFFF" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
